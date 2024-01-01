@@ -17,10 +17,10 @@ class recipeController extends Controller
         $allRecipes = Recipe::with('ingredients')->get();
 
         // Logic to determine  recipes based on available products and recipes
-        $possibleRecipes = $this->filterGet_recipe($allRecipes, $productsInStock);
+        $getRecipes = $this->filterGet_recipe($allRecipes, $productsInStock);
 
         // Return the possible recipes as JSON response
-        return response()->json($possibleRecipes);
+        return response()->json($getRecipes);
     }
 
 
@@ -30,7 +30,7 @@ class recipeController extends Controller
      private function filterGet_recipe($recipes, $productsInStock)
      {
          // Array to store  recipes
-         $possibleRecipes = [];
+         $getRecipes = [];
  
          foreach ($recipes as $recipe) {
              // Check if all ingredients for the recipe are available in stock
@@ -38,13 +38,13 @@ class recipeController extends Controller
  
              if (empty($missingIngredients)) {
                  // All ingredients are in stock
-                 $possibleRecipes[] = [
+                 $getRecipes[] = [
                      'recipe' => $recipe,
                      'status' => 'Available',
                  ];
              } else {
                  // Some ingredients are missing, add the recipe with missing ingredients
-                 $possibleRecipes[] = [
+                 $getRecipes[] = [
                      'recipe' => $recipe,
                      'status' => 'Missing',
                      'missing_ingredients' => $missingIngredients,
@@ -52,7 +52,7 @@ class recipeController extends Controller
              }
          }
  
-         return $possibleRecipes;
+         return $getRecipes;
      }
  
      // Missing ingredients for a recipe

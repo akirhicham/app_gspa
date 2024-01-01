@@ -67,9 +67,9 @@ Status Codes:
 
 Authentication: None required
 
-- 2. Get Possible Recipes
+- 2. Get Recipes
 
-Endpoint URL: /api/possible_recipes
+Endpoint URL: /api/get_recipes
 
 Request Method: GET
 

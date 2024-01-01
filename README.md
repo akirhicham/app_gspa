@@ -26,6 +26,7 @@ To seed the database with sample data, run the following command:
 php artisan db:seed
 
 ## Interfaces
+![Screenshot](/screenshots/interface.png)
 
 1. Adding Food Products (Interface)
 

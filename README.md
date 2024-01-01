@@ -27,7 +27,7 @@ php artisan db:seed
 
 ## Interfaces
 
-## Adding Food Products (Interface)
+1. Adding Food Products (Interface)
 
 To enhance user interaction and streamline the process of adding food products. 
 The interface features a form with three essential fields, making the addition of food products straightforward and efficient.

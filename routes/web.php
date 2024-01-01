@@ -18,11 +18,9 @@ use App\Http\Controllers\recipeController;
 |
 */
 
-Route::get('/', function () {
-    return view('add_product');
-});
+Route::get('/', [stockController::class, 'index']);
 
-Route::get('/add_product', [stockController::class, 'index'])->name('add_product');;
+Route::get('/add_product', [stockController::class, 'index'])->name('add_product');
 Route::post('/create_product', [stockController::class, 'create'])->name('create_product');
 Route::get('/products_in_stock', [stockController::class, 'getProductsInStock'])->name('products_in_stock');
 Route::get('/get_recipe', [recipeController::class, 'get_recipe'])->name('get_recipe');

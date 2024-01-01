@@ -27,14 +27,12 @@
           <a class="nav-link" href="{{route('add_product')}}">Produits <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Api 1</a>
+          <a class="nav-link" href="{{route('products_in_stock')}}" target="_blanc">Api 1</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Api 2</a>
+          <a class="nav-link" href="{{route('get_recipe')}}" target="_blanc" target="_blanc">Api 2</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Api 3</a>
-        </li>
+     
       </ul>
     </div>
   </nav>

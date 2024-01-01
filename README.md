@@ -53,6 +53,7 @@ The interface features a form with three essential fields, making the addition o
 
 ## Webservices
 - 1. Get Products in Stock
+![Screenshot](/screenshots/get_products.png)
 
 Endpoint URL: /api/products_in_stock
 
